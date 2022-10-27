@@ -1,22 +1,28 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-undef */
+
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path = require('path');
+const path = require("path");
 
 module.exports = function (env, argv) {
-  const isProd = argv.mode === 'production';
-  const isDev = argv.mode === 'development';
+  const isProd = argv.mode === "production";
+  const isDev = argv.mode === "development";
 
   return {
     mode: isDev ? "development" : "production",
-    entry: './src/index.tsx',
+    entry: "./src/index.tsx",
     output: {
-      path: path.resolve(__dirname, './dist'),
-      filename: 'bundle.js'
+      path: path.resolve(__dirname, "./dist"),
+      filename: "[hash:8].chunks.js",
+      asyncChunks: true,
     },
-    devtool: isDev ? 'source-map' : false,
+    devtool: isDev ? "source-map" : false,
     devServer: {
       // https: true, // TODO
       static: {
-        directory: path.resolve(__dirname, './dist')
+        directory: path.resolve(__dirname, "./dist"),
       },
       compress: true,
       port: 8080,
@@ -28,10 +34,10 @@ module.exports = function (env, argv) {
     module: {
       rules: [
         {
-          test: /\.(js|ts)x?$/,    // add |ts
+          test: /\.(js|ts)x?$/, // add |ts
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader',
+            loader: "babel-loader",
           },
         },
         {
@@ -43,18 +49,30 @@ module.exports = function (env, argv) {
               loader: "css-loader",
               options: {
                 modules: {
-                  localIdentName: isDev ? "[name]-[local]-[hash:base64:5]" : '[hash:base64:6]',
+                  localIdentName: isDev
+                    ? "[name]-[local]-[hash:base64:5]"
+                    : "[hash:base64:6]",
                 },
               },
             },
-            "sass-loader"
-          ]
-        }
+            "sass-loader",
+          ],
+        },
       ],
     },
     resolve: {
-      extensions: ['.tsx', '.ts', '.jsx', '.js'],
+      extensions: [".tsx", ".ts", ".jsx", ".js"],
     },
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: "./assets/index.html",
+        minify: {
+          collapseWhitespace: true,
+          keepClosingSlash: true,
+          removeComments: true,
+        },
+      }),
+      new MiniCssExtractPlugin(),
+    ],
   };
 };

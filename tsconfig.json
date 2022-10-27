@@ -25,7 +25,8 @@
     "noFallthroughCasesInSwitch": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "webpack.config.js"
   ],
   "include": [
     "src",
