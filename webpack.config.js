@@ -20,6 +20,7 @@ module.exports = function (env, argv) {
     },
     devtool: isDev ? "source-map" : false,
     devServer: {
+      open: true,
       // https: true, // TODO
       static: {
         directory: path.resolve(__dirname, "./dist"),
@@ -63,6 +64,7 @@ module.exports = function (env, argv) {
     resolve: {
       extensions: [".tsx", ".ts", ".jsx", ".js"],
     },
+    stats: "errors-only",
     plugins: [
       new HtmlWebpackPlugin({
         template: "./assets/index.html",
