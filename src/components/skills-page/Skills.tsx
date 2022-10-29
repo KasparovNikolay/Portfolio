@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 
-import styles from "./skills.module.scss";
 import { mockTechnologies } from "../../utils/mockTechnologies";
+
+import styles from "./skills.module.scss";
 
 export type SkillsProps = {};
 

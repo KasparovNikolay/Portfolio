@@ -8,7 +8,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = function (env, argv) {
-  console.log("process.env", process.env.DB_NAME);
   const isDev = argv.mode === "development";
 
   return {
@@ -18,6 +17,7 @@ module.exports = function (env, argv) {
       path: path.resolve(__dirname, "./dist"),
       filename: "[fullhash:8].chunks.js",
       asyncChunks: true,
+      publicPath: "/",
     },
     devtool: isDev ? "source-map" : false,
     devServer: {
@@ -26,6 +26,7 @@ module.exports = function (env, argv) {
       static: {
         directory: path.resolve(__dirname, "./dist"),
       },
+      historyApiFallback: true,
       compress: true,
       port: 8080,
       client: {
@@ -52,7 +53,7 @@ module.exports = function (env, argv) {
               options: {
                 modules: {
                   localIdentName: isDev
-                    ? "[name]-[local]-[hash:base64:5]"
+                    ? "[folder]-[local]-[hash:base64:5]"
                     : "[hash:base64:6]",
                 },
               },

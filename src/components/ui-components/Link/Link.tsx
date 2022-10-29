@@ -1,6 +1,8 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC } from "react";
 import { Link as RouterLink, NavLink } from "react-router-dom";
 import cls from "classnames";
+
+import { Children } from "../../../utils/types";
 
 import styles from "./link.module.scss";
 
@@ -8,7 +10,7 @@ export type LinkProps = {
   type?: "inner" | "outer" | "navlink";
   href: string;
   className?: string;
-  children: ReactNode | ReactNode[] | string | null | undefined;
+  children: Children;
   activeClassName?: string;
 };
 
@@ -34,8 +36,9 @@ const Link: FC<LinkProps> = ({
       <NavLink
         to={href}
         className={({ isActive }) =>
-          cls(className, isActive && (activeClassName || styles.link))
+          cls(className, styles.link, isActive && activeClassName)
         }
+        end
       >
         {children}
       </NavLink>
