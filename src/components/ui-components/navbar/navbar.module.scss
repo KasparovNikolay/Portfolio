@@ -1,0 +1,22 @@
+.navbar {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  border: 2px solid #FAB005;
+  border-radius: 27.5px;
+
+  &_link{
+    padding: 12px 24px;
+    text-transform: capitalize;
+    color: white;
+
+    &_active {
+      background: #FAB005;
+      color: black;
+      border-radius: 25px;
+    }
+  }
+}

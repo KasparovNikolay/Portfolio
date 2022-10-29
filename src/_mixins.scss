@@ -1,0 +1,33 @@
+:root {
+  --color-light-purple: #cf59e6;
+  --color-light-blue: #6bc5f8;
+}
+
+@mixin text-animation {
+  background:
+    linear-gradient(
+      -45deg,
+      var(--color-light-blue),
+      var(--color-light-purple),
+      var(--color-light-blue),
+      var(--color-light-purple)
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}

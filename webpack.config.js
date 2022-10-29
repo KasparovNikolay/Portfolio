@@ -4,10 +4,11 @@
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const Dotenv = require("dotenv-webpack");
 const path = require("path");
 
 module.exports = function (env, argv) {
-  const isProd = argv.mode === "production";
+  console.log("process.env", process.env.DB_NAME);
   const isDev = argv.mode === "development";
 
   return {
@@ -15,7 +16,7 @@ module.exports = function (env, argv) {
     entry: "./src/index.tsx",
     output: {
       path: path.resolve(__dirname, "./dist"),
-      filename: "[hash:8].chunks.js",
+      filename: "[fullhash:8].chunks.js",
       asyncChunks: true,
     },
     devtool: isDev ? "source-map" : false,
@@ -56,6 +57,21 @@ module.exports = function (env, argv) {
                 },
               },
             },
+            {
+              loader: "postcss-loader",
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    [
+                      "autoprefixer",
+                      // {
+                      //   // Options
+                      // },
+                    ],
+                  ],
+                },
+              },
+            },
             "sass-loader",
           ],
         },
@@ -64,7 +80,6 @@ module.exports = function (env, argv) {
     resolve: {
       extensions: [".tsx", ".ts", ".jsx", ".js"],
     },
-    stats: "errors-only",
     plugins: [
       new HtmlWebpackPlugin({
         template: "./assets/index.html",
@@ -75,6 +90,10 @@ module.exports = function (env, argv) {
         },
       }),
       new MiniCssExtractPlugin(),
+      // TODO:
+      // new Dotenv({
+      //   path: "./.env",
+      // }),
     ],
   };
 };

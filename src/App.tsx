@@ -1,28 +1,39 @@
 import React, { FC, StrictMode } from "react";
-
-import { Header } from "./components/Layouts/Header";
-import { getMockText } from "./utils/getMockText";
-import Layout from "./components/Layouts/Layout";
-import Block from "./components/Layouts/Block";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import { StaticLayout } from "./components/ui-components/static-layout";
+import { Navbar } from "./components/ui-components/navbar";
+import { Skills } from "./components/skills-page";
+import { HomePage } from "./components/home-page";
 
 import "./styles.scss";
+import { ErrorBoundary } from "./components/ErrorBoundary";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route
+      element={
+        <StaticLayout>
+          <Navbar />
+        </StaticLayout>
+      }
+    >
+      <Route path="/" element={<HomePage />} />
+      <Route path="/skills" element={<Skills />} />
+    </Route>
+  )
+);
 
 export const App: FC = () => {
   return (
     <StrictMode>
-      <Layout>
-        <Block>
-          <h1>{getMockText(20)}</h1>
-          <h2>{getMockText(100)}</h2>
-          <h3>{getMockText(90)}</h3>
-          <span>{getMockText(100)}</span>
-          <p>{getMockText(100)}</p>
-          <button>click</button>
-        </Block>
-        <Block />
-        <Block />
-        <Header />
-      </Layout>
+      <ErrorBoundary>
+        <RouterProvider router={router} />
+      </ErrorBoundary>
     </StrictMode>
   );
 };

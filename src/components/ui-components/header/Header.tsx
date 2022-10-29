@@ -1,43 +1,27 @@
-import React, { FC, memo } from "react";
+import React, { FC } from "react";
 
-import styles from "./header.module.scss";
+import { getNavbar } from "../../../utils/mockNavbar";
 import Link from "../Link/Link";
 
-const text = {
-  contact: {
-    en: "contact",
-    ru: "контакты",
-  },
-  skills: {
-    en: "skills",
-    ru: "навыки",
-  },
-  expirience: {
-    en: "expirience",
-    ru: "опыт",
-  },
-  projects: {
-    en: "projects",
-    ru: "проекты",
-  },
-};
+import styles from "./header.module.scss";
 
 const Header: FC = () => {
   const lang = "ru";
+  const mockNavbar = getNavbar();
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link className={styles.header_link} href="#">
-          {text.contact[lang]}
+          {mockNavbar.home[lang]}
         </Link>
         <Link className={styles.header_link} href="#">
-          {text.skills[lang]}
+          {mockNavbar.contact[lang]}
         </Link>
         <Link className={styles.header_link} href="#">
-          {text.expirience[lang]}
+          {mockNavbar.skills[lang]}
         </Link>
         <Link className={styles.header_link} href="#">
-          {text.projects[lang]}
+          {mockNavbar.projects[lang]}
         </Link>
       </nav>
     </header>

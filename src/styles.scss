@@ -1,9 +1,5 @@
-$main-color-light: #bbf7d0;
-$main-color: #86efac;
-$text-color-gray-light: #a1a1aa;
-$text-color-gray: #71717a;
-$main-text-color: #6b7280;
-$background: #18181b;
+$primary-color: #FAB005;
+$second-color: #121212;
 
 html,
 body {
@@ -19,34 +15,13 @@ body {
 
 body {
   width: auto;
-  background: $background;
   font-family: Poppins, sans-serif;
   font-size: 16px;
 }
 
-h1 {
-  color: $main-color-light;
-  font-size: 96px;
-}
-
-h2 {
-  color: $text-color-gray;
-  font-size: 48px;
-}
-
-h3 {
-  color: $main-color-light;
-  font-size: 18px;
-}
-
-p,
-span {
-  color: $main-text-color;
-}
-
 button {
   padding: 12px 24px;
-  background: $main-color;
+  background: $primary-color;
   color: #14532d;
   outline: none;
   border: none;
