@@ -1,8 +1,9 @@
 .wrap {
-  position: absolute;
-  top: 50%;
-  left: 50px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
 }
 
 .item_img {

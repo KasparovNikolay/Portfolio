@@ -1,10 +1,6 @@
 import React, { FC } from "react";
 
-import styles from "./unknownPage.module.scss";
-
-export type UnknownPageProps = {};
-
-const UnknownPage: FC<UnknownPageProps> = () => {
+const UnknownPage: FC = () => {
   return <div>Unknown page. Go home!</div>;
 };
 

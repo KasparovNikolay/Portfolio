@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 import { getNavbar } from "../../../utils/mockNavbar";
-import Link from "../Link/Link";
+import { Link } from "../link";
 
 import styles from "./navbar.module.scss";
 

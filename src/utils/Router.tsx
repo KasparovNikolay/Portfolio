@@ -1,12 +1,15 @@
 import React from "react";
+
 import { createBrowserRouter } from "react-router-dom";
 
-import { StaticLayout } from "../components/ui-components/static-layout";
-import { Navbar } from "../components/ui-components/navbar";
-import { UnknownPage } from "../components/unknown-page";
+import { ContactPage } from "../components/contact-page";
 import { ErrorPage } from "../components/error-page";
 import { HomePage } from "../components/home-page";
-import { Skills } from "../components/skills-page";
+import { ProjectsPage } from "../components/projects-page";
+import { SkillsPage } from "../components/skills-page";
+import { Navbar } from "../components/ui-components/navbar";
+import { StaticLayout } from "../components/ui-components/static-layout";
+import { UnknownPage } from "../components/unknown-page";
 
 const routerConfig = [
   {
@@ -24,15 +27,15 @@ const routerConfig = [
       },
       {
         path: "skills",
-        element: <Skills />,
+        element: <SkillsPage />,
       },
       {
         path: "projects",
-        element: <Skills />,
+        element: <ProjectsPage />,
       },
       {
         path: "contact",
-        element: <Skills />,
+        element: <ContactPage />,
       },
       {
         path: "*",

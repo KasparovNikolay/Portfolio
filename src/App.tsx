@@ -1,4 +1,5 @@
 import React, { FC, StrictMode } from "react";
+
 import { RouterProvider } from "react-router-dom";
 
 import { ErrorBoundary } from "./components/ErrorBoundary";

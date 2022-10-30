@@ -1,9 +1,15 @@
 @import "src/_mixins";
 
 .wrap {
-  h1 {
-    @include text-animation;
+  max-width: 80%;
+}
 
-    font-size: 48px;
+.title {
+
+
+  font-size: 48px;
+  text-align: center;
+  .animated {
+    @include text-animation;
   }
 }

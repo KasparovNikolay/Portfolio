@@ -17,8 +17,6 @@ const mockNavbar = {
   },
 };
 
-const lang = "ru";
-
 export const getNavbar = () => {
   return Object.keys(mockNavbar).map(
     (item) => mockNavbar[item as keyof typeof mockNavbar]

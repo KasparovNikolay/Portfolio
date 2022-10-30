@@ -6,7 +6,8 @@ const SCROLL_COEFFICIENT = 0.7;
  */
 export const useScrollChange = (): { ref: MutableRefObject<null> } => {
   const ref = useRef(null);
-  const onWheel = useCallback((e: any) => {
+
+  const onWheel = useCallback((e: WheelEvent) => {
     e.preventDefault();
     const el = ref.current as unknown as HTMLElement;
     const diffY = e.deltaY;
@@ -17,7 +18,7 @@ export const useScrollChange = (): { ref: MutableRefObject<null> } => {
     } else {
       el.scrollLeft = leftPosition + diffX * SCROLL_COEFFICIENT;
     }
-  }, []);
+  }, []) as EventListener;
 
   useEffect(() => {
     const el = ref.current as unknown as HTMLElement;

@@ -1,17 +1,16 @@
 import React, { FC } from "react";
 
 import { mockTechnologies } from "../../utils/mockTechnologies";
+import { Image } from "../ui-components/image";
 
 import styles from "./skills.module.scss";
 
-export type SkillsProps = {};
-
-const Skills: FC<SkillsProps> = () => {
+const SkillsPage: FC = () => {
   return (
     <div className={styles.wrap}>
       {mockTechnologies.map(({ imgUrl, title }) => (
         <div key={imgUrl} className={styles.item}>
-          <img
+          <Image
             src={imgUrl}
             alt="imgUrl"
             width={50}
@@ -24,4 +23,4 @@ const Skills: FC<SkillsProps> = () => {
   );
 };
 
-export default Skills;
+export default SkillsPage;
