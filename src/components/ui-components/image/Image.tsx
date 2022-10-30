@@ -5,13 +5,13 @@ import React, {
   ReactElement,
   ReactNode,
   useState,
-} from "react";
+} from 'react';
 
-import cls from "classnames";
+import cls from 'classnames';
 
-import { useLazyLoad } from "../../../utils/useLazyLoad";
+import { useLazyLoad } from '../../../utils/useLazyLoad';
 
-import styles from "./image.module.scss";
+import styles from './image.module.scss';
 
 type ImagePropsType = {
   fallback?: ReactNode;
@@ -25,7 +25,7 @@ const Image: FC<ImagePropsType> = ({
   className,
   ...props
 }) => {
-  const [show, element] = useLazyLoad({ rootMargin: "300px" });
+  const [show, element] = useLazyLoad({ rootMargin: '300px' });
   const [showImage, setShowImage] = useState(true);
   const handleError = (): void => setShowImage(false);
   if (!showImage || !src)
@@ -37,7 +37,7 @@ const Image: FC<ImagePropsType> = ({
       onError={handleError}
     >
       {show && (
-        <img src={src} {...props} alt={alt || src || ""} onLoad={onLoad} />
+        <img src={src} {...props} alt={alt || src || ''} onLoad={onLoad} />
       )}
     </picture>
   );

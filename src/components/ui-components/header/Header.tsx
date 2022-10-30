@@ -1,12 +1,12 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import { getNavbar } from "../../../utils/mockNavbar";
-import Link from "../Link/Link";
+import { getNavbar } from '../../../utils/mockNavbar';
+import Link from '../Link/Link';
 
-import styles from "./header.module.scss";
+import styles from './header.module.scss';
 
 const Header: FC = () => {
-  const lang = "ru";
+  const lang = 'ru';
   const mockNavbar = getNavbar();
   return (
     <header className={styles.header}>

@@ -1,1 +1,1 @@
-export { default as SkillsPage } from "./SkillsPage";
+export { default as SkillsPage } from './SkillsPage';

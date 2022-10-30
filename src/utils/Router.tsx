@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from 'react-router-dom';
 
-import { ContactPage } from "../components/contact-page";
-import { ErrorPage } from "../components/error-page";
-import { HomePage } from "../components/home-page";
-import { ProjectsPage } from "../components/projects-page";
-import { SkillsPage } from "../components/skills-page";
-import { Navbar } from "../components/ui-components/navbar";
-import { StaticLayout } from "../components/ui-components/static-layout";
-import { UnknownPage } from "../components/unknown-page";
+import { ContactPage } from '../components/contact-page';
+import { ErrorPage } from '../components/error-page';
+import { HomePage } from '../components/home-page';
+import { ProjectsPage } from '../components/projects-page';
+import { SkillsPage } from '../components/skills-page';
+import { Navbar } from '../components/ui-components/navbar';
+import { StaticLayout } from '../components/ui-components/static-layout';
+import { UnknownPage } from '../components/unknown-page';
 
 const routerConfig = [
   {
-    path: "/",
+    path: '/',
     element: (
       <StaticLayout>
         <Navbar />
@@ -22,23 +22,23 @@ const routerConfig = [
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <HomePage />,
       },
       {
-        path: "skills",
+        path: 'skills',
         element: <SkillsPage />,
       },
       {
-        path: "projects",
+        path: 'projects',
         element: <ProjectsPage />,
       },
       {
-        path: "contact",
+        path: 'contact',
         element: <ContactPage />,
       },
       {
-        path: "*",
+        path: '*',
         element: <UnknownPage />,
       },
     ],

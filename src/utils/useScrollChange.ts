@@ -1,4 +1,4 @@
-import { MutableRefObject, useCallback, useEffect, useRef } from "react";
+import { MutableRefObject, useCallback, useEffect, useRef } from 'react';
 
 const SCROLL_COEFFICIENT = 0.7;
 /*
@@ -22,9 +22,9 @@ export const useScrollChange = (): { ref: MutableRefObject<null> } => {
 
   useEffect(() => {
     const el = ref.current as unknown as HTMLElement;
-    el.addEventListener("mousewheel", onWheel, false);
+    el.addEventListener('mousewheel', onWheel, false);
     return () => {
-      el.removeEventListener("mousewheel", onWheel, false);
+      el.removeEventListener('mousewheel', onWheel, false);
     };
   }, []);
 

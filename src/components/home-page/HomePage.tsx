@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import styles from "./homePage.module.scss";
+import styles from './homePage.module.scss';
 
 const text = {
-  ru: "Меня зовут Николай.",
-  en: "Hi, my name is Nikolay.",
+  ru: 'Меня зовут Николай.',
+  en: 'Hi, my name is Nikolay.',
 };
 
 const HomePage: FC = () => {

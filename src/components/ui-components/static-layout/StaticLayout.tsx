@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
-import { Children } from "../../../utils/types";
+import { Children } from '../../../utils/types';
 
-import styles from "./staticLayout.module.scss";
+import styles from './staticLayout.module.scss';
 
 export type StaticLayoutProps = { children: Children };
 

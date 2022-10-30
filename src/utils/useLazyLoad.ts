@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect, useRef, useState } from "react";
+import { MutableRefObject, useEffect, useRef, useState } from 'react';
 
 export const useLazyLoad = (
   config?: IntersectionObserverInit

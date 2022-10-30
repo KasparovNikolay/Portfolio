@@ -1,8 +1,8 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode } from 'react';
 
-import { useScrollChange } from "../../../utils/useScrollChange";
+import { useScrollChange } from '../../../utils/useScrollChange';
 
-import styles from "./layout.module.scss";
+import styles from './layout.module.scss';
 
 type LayoutProps = { children: ReactNode | ReactNode[] };
 

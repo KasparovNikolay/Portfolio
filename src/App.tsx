@@ -1,11 +1,11 @@
-import React, { FC, StrictMode } from "react";
+import React, { FC, StrictMode } from 'react';
 
-import { RouterProvider } from "react-router-dom";
+import { RouterProvider } from 'react-router-dom';
 
-import { ErrorBoundary } from "./components/ErrorBoundary";
-import { router } from "./utils/Router";
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { router } from './utils/Router';
 
-import "./styles.scss";
+import './styles.scss';
 
 export const App: FC = () => {
   return (

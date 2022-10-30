@@ -11,6 +11,11 @@
     "overrides":[
 
     ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "parser":"@typescript-eslint/parser",
     "parserOptions":{
         "ecmaVersion":"latest",
@@ -24,6 +29,8 @@
         "import"
     ],
     "rules":{
+        "quotes": ["error", "single"],
+        "jsx-quotes": ["error", "prefer-double"],
         "react/react-in-jsx-scope":"off",
         "camelcase":"error",
         "spaced-comment":"error",

@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import { mockTechnologies } from "../../utils/mockTechnologies";
-import { Image } from "../ui-components/image";
+import { mockTechnologies } from '../../utils/mockTechnologies';
+import { Image } from '../ui-components/image';
 
-import styles from "./skills.module.scss";
+import styles from './skills.module.scss';
 
 const SkillsPage: FC = () => {
   return (

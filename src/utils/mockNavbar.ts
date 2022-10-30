@@ -1,19 +1,19 @@
 const mockNavbar = {
   home: {
-    en: "home",
-    ru: "главная",
+    en: 'home',
+    ru: 'главная',
   },
   skills: {
-    en: "skills",
-    ru: "навыки",
+    en: 'skills',
+    ru: 'навыки',
   },
   projects: {
-    en: "projects",
-    ru: "проекты",
+    en: 'projects',
+    ru: 'проекты',
   },
   contact: {
-    en: "contact",
-    ru: "контакты",
+    en: 'contact',
+    ru: 'контакты',
   },
 };
 

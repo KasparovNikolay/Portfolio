@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
 const UnknownPage: FC = () => {
   return <div>Unknown page. Go home!</div>;

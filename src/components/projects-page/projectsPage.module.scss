@@ -1,0 +1,20 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 700px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #1d1d20;
+}
+
+.item_img {
+  height: 30px;
+
+  picture,
+  img {
+    height: 30px;
+    width: auto;
+  }
+}

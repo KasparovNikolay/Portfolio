@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import { Children } from "../../../utils/types";
+import { Children } from '../../../utils/types';
 
-import styles from "./block.module.scss";
+import styles from './block.module.scss';
 
 type BlockProps = { children?: Children };
 
