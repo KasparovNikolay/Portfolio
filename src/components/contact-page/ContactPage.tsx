@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { Image } from '@ui/image';
 import { Link } from '@ui/link';
 import { SmoothList } from '@ui/smooth-list';
-import { mockContacts } from '@utils/mockContacts';
+import { mockContacts } from '@utils/mocks';
 
 import styles from './contactPage.module.scss';
 

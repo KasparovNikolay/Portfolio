@@ -10,7 +10,7 @@ type useTransitionProps = {
   delay?: number;
   fade?: boolean;
   type?: 'transition';
-  direction?: 'top' | 'left' | 'right' | 'button';
+  direction?: 'top' | 'left' | 'right' | 'buttom';
 };
 type useTransitionType = (props?: useTransitionProps) => {
   style: useTransitionState;
@@ -25,17 +25,15 @@ const getStylesFromProps = (props?: useTransitionProps): CSSProperties => {
     };
 
   if (props.intialStyle) return props.intialStyle;
-  const { delay, type, direction, fade } = props;
+  const { delay = 300, type, direction, fade = false } = props;
   const result: CSSProperties = {
-    transition: `opacity ${delay || 320}ms ease-in 0s, transform ${
-      delay || 300
-    }ms ease-out 0s`,
+    transition: `opacity ${delay}ms ease-in 0s, transform ${delay}ms ease-out 0s`,
   };
   const transtionDirections = {
-    left: 'translateX(-500px)',
-    right: 'translateX(500px)',
+    right: 'translateX(-500px)',
+    left: 'translateX(500px)',
     top: 'translateY(300px)',
-    button: 'translateY(-300px)',
+    buttom: 'translateY(-300px)',
   };
   if (type === 'transition' && !!direction) {
     result.transform = transtionDirections[direction];

@@ -17,6 +17,6 @@
     "singleQuote": true,
     "trailingComma": "all",
     "jsxSingleQuote": false,
-    "bracketSpacing": true,
+    "bracketSpacing": true
   }
 }

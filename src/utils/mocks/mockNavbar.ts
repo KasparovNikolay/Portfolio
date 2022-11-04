@@ -3,6 +3,10 @@ const mockNavbar = {
     en: 'home',
     ru: 'главная',
   },
+  bio: {
+    en: 'bio',
+    ru: 'биография',
+  },
   skills: {
     en: 'skills',
     ru: 'навыки',

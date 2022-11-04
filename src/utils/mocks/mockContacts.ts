@@ -1,8 +1,8 @@
-import fb from '../../assets/images/fb.png';
-import git from '../../assets/images/git.png';
-import linkedIn from '../../assets/images/in.png';
-import inst from '../../assets/images/inst.png';
-import tg from '../../assets/images/tg.png';
+import fb from '../../../assets/images/fb.png';
+import git from '../../../assets/images/github.png';
+import linkedIn from '../../../assets/images/in.png';
+import inst from '../../../assets/images/inst.png';
+import tg from '../../../assets/images/tg.png';
 
 type Contact = {
   link: string;

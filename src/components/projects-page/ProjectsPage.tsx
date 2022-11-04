@@ -4,7 +4,7 @@ import { Accordion } from '@ui/accordion';
 import { Image } from '@ui/image';
 import { InfinitLooper } from '@ui/infinit-looper';
 import { Link } from '@ui/link';
-import { ExpirienceType, mockProjects } from '@utils/mockProjects';
+import { ExpirienceType, mockProjects } from '@utils/mocks';
 
 import styles from './projectsPage.module.scss';
 

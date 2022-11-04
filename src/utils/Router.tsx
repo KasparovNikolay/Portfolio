@@ -2,6 +2,7 @@ import React from 'react';
 
 import { createBrowserRouter } from 'react-router-dom';
 
+import { BioPage } from '../components/bio-page';
 import { ContactPage } from '../components/contact-page';
 import { ErrorPage } from '../components/error-page';
 import { HomePage } from '../components/home-page';
@@ -24,6 +25,10 @@ const routerConfig = [
       {
         path: '/',
         element: <HomePage />,
+      },
+      {
+        path: 'bio',
+        element: <BioPage />,
       },
       {
         path: 'skills',

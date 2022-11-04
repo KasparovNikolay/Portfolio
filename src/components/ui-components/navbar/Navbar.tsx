@@ -1,5 +1,4 @@
 import React, {
-  CSSProperties,
   FC,
   useEffect,
   useLayoutEffect,
@@ -8,10 +7,10 @@ import React, {
   useState,
 } from 'react';
 
+import { useTransition } from '@utils/hooks';
+import { getNavbar } from '@utils/mocks';
 import { useLocation } from 'react-router-dom';
 
-import { getNavbar } from '../../../utils/mockNavbar';
-import { useTransition } from '../../../utils/useTransition';
 import { Link } from '../link';
 
 import styles from './navbar.module.scss';

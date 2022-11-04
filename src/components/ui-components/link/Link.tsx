@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 
+import { Children } from '@utils/types';
 import cls from 'classnames';
 import { Link as RouterLink, NavLink } from 'react-router-dom';
-
-import { Children } from '../../../utils/types';
 
 import styles from './link.module.scss';
 

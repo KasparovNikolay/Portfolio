@@ -1,6 +1,8 @@
 import React, { FC, memo } from 'react';
 
-import { useTransition } from '@utils/useTransition';
+import { useTransition } from '@utils/hooks';
+
+import AnimatedText from '../ui-components/animated-text/AnimatedText';
 
 import styles from './homePage.module.scss';
 
@@ -20,7 +22,7 @@ const HomePage: FC = () => {
       <h1 className={styles.title} style={style}>
         {text.en}
         <br />
-        <span className={styles.animated}>I am React Frontend developer.</span>
+        <AnimatedText>I am React Frontend developer.</AnimatedText>
         <br />
         And this is my site-resume
       </h1>
