@@ -11,7 +11,9 @@
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}' --config ./.prettierrc",
-    "lint:style": "stylelint \"**/*.scss\" --fix"
+    "lint:style": "stylelint \"**/*.scss\" --fix",
+    "deploy": "firebase deploy",
+    "predeploy": "npm run lint"
   },
   "keywords": [
     "react",
