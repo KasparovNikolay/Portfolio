@@ -29,7 +29,7 @@
         "import"
     ],
     "rules":{
-        "quotes": ["error", "single"],
+        "quotes": ["error", "single", { "allowTemplateLiterals": true }],
         "jsx-quotes": ["error", "prefer-double"],
         "react/react-in-jsx-scope":"off",
         "camelcase":"error",
@@ -60,8 +60,7 @@
                 ],
                 "newlines-between":"always",
                 "alphabetize":{
-                    "order":"asc",
-                    "caseInsensitive":true
+                    "order":"asc"
                 }
             }
         ]

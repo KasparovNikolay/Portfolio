@@ -1,5 +1,5 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
@@ -7,16 +7,29 @@
   align-items: flex-end;
   border: 2px solid #fab005;
   border-radius: 27.5px;
+  background: #333;
+  box-shadow: 0 0 20px 1px #1d1d20;
 
   &_link {
     padding: 12px 24px;
     text-transform: capitalize;
     color: white;
+    font-size: 16px;
 
     &_active {
-      background: #fab005;
       color: black;
-      border-radius: 25px;
     }
   }
+}
+
+.animatedActive {
+  @extend .navbar_link;
+
+  position: absolute;
+  background: #fab005;
+  top: 0;
+  z-index: -1;
+  color: black;
+  border-radius: 25px;
+  transition: left 0.3s;
 }

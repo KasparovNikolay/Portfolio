@@ -1,0 +1,13 @@
+.container {
+  overflow: hidden;
+  max-height: 0;
+  transition: .3s ease-out;
+}
+
+.testRender {
+  width: 100%;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+}

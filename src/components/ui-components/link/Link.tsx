@@ -11,6 +11,7 @@ export type LinkProps = {
   type?: 'inner' | 'outer' | 'navlink';
   href: string;
   className?: string;
+  onClick?: (event: unknown) => void;
   children: Children;
   activeClassName?: string;
 };
@@ -26,7 +27,7 @@ const Link: FC<LinkProps> = ({
   if (!children || !href) return null;
   if (type === 'inner') {
     return (
-      <RouterLink to={href} className={cls(className, styles.link)}>
+      <RouterLink to={href} className={cls(className, styles.link)} {...props}>
         {children}
       </RouterLink>
     );
@@ -35,6 +36,7 @@ const Link: FC<LinkProps> = ({
   if (type === 'navlink') {
     return (
       <NavLink
+        {...props}
         to={href}
         className={({ isActive }) =>
           cls(className, styles.link, isActive && activeClassName)

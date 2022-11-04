@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 const UnknownPage: FC = () => {
-  return <div>Unknown page. Go home!</div>;
+  return <h1>Unknown page. Go home!</h1>;
 };
 
 export default UnknownPage;

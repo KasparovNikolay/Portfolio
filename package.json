@@ -9,12 +9,18 @@
     "build": "webpack --mode production --progress --hide-modules",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}' --config ./.prettierrc",
     "lint:style": "stylelint \"**/*.scss\" --fix"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "typescript"
+  ],
   "author": "Nikolay Kasparov",
   "license": "ISC",
+  "prettier": {
+    "singleQuote": true
+  },
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
@@ -30,7 +36,6 @@
     "classnames": "^2.3.2",
     "core-js": "^3.26.0",
     "css-loader": "^6.7.1",
-    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.2",

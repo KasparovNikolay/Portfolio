@@ -5,10 +5,9 @@
 }
 
 .title {
-
-
   font-size: 48px;
   text-align: center;
+
   .animated {
     @include text-animation;
   }

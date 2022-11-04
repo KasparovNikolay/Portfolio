@@ -15,7 +15,7 @@ type ProjectType = {
   technologies: TechnologyType[];
 };
 
-type ExpirienceType = {
+export type ExpirienceType = {
   companyName: string;
   companyUrl: string | null;
   companyLogo: string;
@@ -98,12 +98,21 @@ export const mockProjects: ExpirienceType[] = [
     timeStart: '01.11.2019',
     timeEnd: '01.04.2022',
     responsibilities: [],
-    technologies: [],
+    technologies: getTechByNames([
+      'html',
+      'css',
+      'git',
+      'js',
+      'react',
+      'redux',
+      'css',
+      'typescript',
+    ]),
     projects: [
       {
         title: 'Рейтинг Букмекеров',
         url: null,
-        description: '',
+        description: 'Рейтинг лучших букмекуров и новости из мира спорта',
         technologies: getTechByNames([
           'git',
           'js',
@@ -116,7 +125,7 @@ export const mockProjects: ExpirienceType[] = [
       {
         title: 'Метамувис',
         url: null,
-        description: '',
+        description: 'Рейтинг лучших онлаин кинотеатров',
         technologies: getTechByNames([
           'git',
           'js',
@@ -162,7 +171,8 @@ export const mockProjects: ExpirienceType[] = [
       {
         title: 'Медиалогия - соцмедия',
         url: null,
-        description: '',
+        description:
+          'Все упоминания и статистика социальных медия по вашему запросу',
         technologies: getTechByNames([
           'git',
           'js',
@@ -176,7 +186,8 @@ export const mockProjects: ExpirienceType[] = [
       {
         title: 'Дэшбород',
         url: null,
-        description: '',
+        description:
+          'Интерактивная карта регионов России со статистикой по результатам голосоввания',
         technologies: getTechByNames([
           'git',
           'js',
@@ -188,7 +199,7 @@ export const mockProjects: ExpirienceType[] = [
         ]),
       },
     ],
-    position: '',
+    position: 'middle-developer',
     description:
       'Сбор и визуализация аналитики по все доступным социальным медия ресурсам',
   },
@@ -198,9 +209,22 @@ export const mockProjects: ExpirienceType[] = [
     companyLogo:
       'https://redlab.dev/wp-content/themes/redlab/images/inhtml/logo.svg',
     timeStart: '01.04.2020',
-    timeEnd: '01.10.2022',
-    responsibilities: [],
-    technologies: [],
+    timeEnd: null,
+    responsibilities: [
+      { text: 'согласование дизайна и формирование UI-кита' },
+      { text: 'разработка библиотеки компонентов' },
+      {
+        text: 'работа над архитектурой приложения и средствами оптимизации кода',
+      },
+    ],
+    technologies: getTechByNames([
+      'git',
+      'js',
+      'react',
+      'redux',
+      'css',
+      'typescript',
+    ]),
     projects: [
       {
         title: 'Alfabank',

@@ -1,12 +1,14 @@
 import React, { FC } from 'react';
 
-import styles from './errorPage.module.scss';
+import { Link } from '@ui/link';
+import { StaticLayout } from '@ui/static-layout';
 
 const ErrorPage: FC = () => {
   return (
-    <div className={styles.wrap}>
-      <h1 className={styles.title}>Something went wrong...</h1>
-    </div>
+    <StaticLayout>
+      <h1>Something went wrong...</h1>
+      <Link href="/">Go home</Link>
+    </StaticLayout>
   );
 };
 

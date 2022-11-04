@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import { mockTechnologies } from '../../utils/mockTechnologies';
-import { Image } from '../ui-components/image';
+import { Image } from '@ui/image';
+import { mockTechnologies } from '@utils/mockTechnologies';
 
 import styles from './skills.module.scss';
 

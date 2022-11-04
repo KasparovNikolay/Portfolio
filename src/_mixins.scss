@@ -1,18 +1,16 @@
-:root {
-  --color-light-purple: #cf59e6;
-  --color-light-blue: #6bc5f8;
-}
+$purple: #cf59e6;
+$blue: #6bc5f8;
 
 @mixin text-animation {
   background:
     linear-gradient(
       -45deg,
-      var(--color-light-blue),
-      var(--color-light-purple),
-      var(--color-light-blue),
-      var(--color-light-purple)
+      $blue,
+      $purple,
+      $blue,
+      $purple
     );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 400% 400%;
   animation: gradient 3s ease infinite;

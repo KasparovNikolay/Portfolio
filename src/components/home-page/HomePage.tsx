@@ -1,4 +1,6 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
+
+import { useTransition } from '@utils/useTransition';
 
 import styles from './homePage.module.scss';
 
@@ -8,9 +10,14 @@ const text = {
 };
 
 const HomePage: FC = () => {
+  const { style } = useTransition({
+    type: 'transition',
+    direction: 'top',
+    fade: true,
+  });
   return (
     <div className={styles.wrap}>
-      <h1 className={styles.title}>
+      <h1 className={styles.title} style={style}>
         {text.en}
         <br />
         <span className={styles.animated}>I am React Frontend developer.</span>
@@ -21,4 +28,4 @@ const HomePage: FC = () => {
   );
 };
 
-export default HomePage;
+export default memo(HomePage);
