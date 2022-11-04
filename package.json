@@ -1,6 +1,6 @@
 {
   "name": "Portfolio",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Site-portfolio, which include all informations such as: bio, expirience, skills and etc.",
   "private": true,
   "main": ".src/index.tsx",
@@ -49,6 +49,7 @@
     "postcss-loader": "^7.0.1",
     "prettier": "^2.7.1",
     "regenerator-runtime": "^0.13.10",
+    "sass": "^1.55.0",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
     "style-loader": "^3.3.1",
