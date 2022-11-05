@@ -5,12 +5,13 @@ import { CSSProperties, useEffect, useState } from 'react';
   Hook let you make initial animation
 */
 type useTransitionState = CSSProperties | undefined;
-type useTransitionProps = {
+export type useTransitionProps = {
   intialStyle?: CSSProperties;
   delay?: number;
   fade?: boolean;
   type?: 'transition';
   direction?: 'top' | 'left' | 'right' | 'buttom';
+  inTransitionComponent?: boolean;
 };
 type useTransitionType = (props?: useTransitionProps) => {
   style: useTransitionState;

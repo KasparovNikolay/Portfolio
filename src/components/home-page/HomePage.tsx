@@ -3,6 +3,7 @@ import React, { FC, memo } from 'react';
 import { useTransition } from '@utils/hooks';
 
 import AnimatedText from '../ui-components/animated-text/AnimatedText';
+import WithTransition from '../ui-components/with-transition/WithTransition';
 
 import styles from './homePage.module.scss';
 
@@ -12,20 +13,17 @@ const text = {
 };
 
 const HomePage: FC = () => {
-  const { style } = useTransition({
-    type: 'transition',
-    direction: 'top',
-    fade: true,
-  });
   return (
     <div className={styles.wrap}>
-      <h1 className={styles.title} style={style}>
-        {text.en}
-        <br />
-        <AnimatedText>I am React Frontend developer.</AnimatedText>
-        <br />
-        And this is my site-resume
-      </h1>
+      <WithTransition type="transition" fade direction="top">
+        <h1 className={styles.title}>
+          {text.en}
+          <br />
+          <AnimatedText>I am React Frontend developer.</AnimatedText>
+          <br />
+          And this is my site-resume
+        </h1>
+      </WithTransition>
     </div>
   );
 };

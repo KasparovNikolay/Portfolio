@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import AnimatedText from '../components/ui-components/animated-text/AnimatedText';
+import AnimatedText from './AnimatedText';
 
 type AnimatedTextType = typeof AnimatedText;
 
